@@ -27,7 +27,7 @@ Clone the repository:
 sh
 
 **Copy code**
-git clone [https://github.com/your-username/group-messaging-app.git](https://github.com/archi999/ChatApp.git)
+git clone [https://github.com/archi999/ChatApp.git]
 cd group-messaging-app
 
 **Install server dependencies:**
