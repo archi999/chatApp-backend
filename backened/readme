@@ -1,0 +1,21 @@
+    chat-app/
+    ├── models/
+    │   ├── User.js
+    │   ├── Group.js
+    │   └── Message.js
+    ├── routes/
+    │   ├── auth.js
+    │   ├── users.js
+    │   ├── groups.js
+    │   └── messages.js
+    ├── middleware/
+    │   └── auth.js
+    ├── controllers/
+    │   ├── authController.js
+    │   ├── userController.js
+    │   ├── groupController.js
+    │   └── messageController.js
+    ├── config/
+    │   └── db.js
+    ├── .env
+    ├── server.js
