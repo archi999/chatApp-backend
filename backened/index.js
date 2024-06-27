@@ -10,12 +10,13 @@ import http from 'http';
 import { Server } from 'socket.io';
 
 dotenv.config();
+const PORT = process.env.PORT || 8080; // Use process.env.PORT for deployment
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000', // Replace with your frontend's origin
+        origin: process.env.FRONTEND_URL || 'http://localhost:3000', // Replace with your frontend's URL for deployment
         methods: ['GET', 'POST'],
     },
 });
@@ -65,8 +66,8 @@ io.on('connection', (socket) => {
 // Connect to MongoDB and Start Server
 connectDB()
     .then(() => {
-        server.listen(8080, () => {
-            console.log('Server started on port 8080');
+        server.listen(PORT, () => {
+            console.log(`Server started on port ${PORT}`);
         });
     })
     .catch((error) => {
